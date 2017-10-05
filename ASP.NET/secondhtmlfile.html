@@ -1,0 +1,111 @@
+<html>
+      <head>
+    <title>My second web page</title>
+    <style>
+       body {    
+    font-family: sans-serif;
+    margin: 36px 36px;
+    background-color: #fcfcfc;
+    color: #aa0033;
+    font-size: 15pt;
+    border: 1px solid #000033;
+    padding: 36px;
+	     }
+        </style>
+       </head>
+     <body>
+ 
+      <!-- https://www.w3.org/TR/html5/ -->
+       <h1>Hello world with a hello girl</h1>
+       <form action="some.url" method="GET">
+
+       <!-- START TABLE -->
+          <table rules="all">
+	   <input type="hidden" id="secret" name="secret" value="Shhhhhhhhh, my secret" />
+	  <tr><td>First name:</td><td> <input type="text" id="firstname" name="firstname" /></td></tr>
+	  
+	  <tr><td>Last name:</td><td> <input type="text" id="firstname" name="firstname" /></td></tr>
+	   <br />
+          <tr><td>Password:</td><td> <input type="password" id="firstname" name="password" /></td></tr>
+	   <br />
+	  <tr><td>Phone:</td><td> <input type="tel" id="phone" name="phone" /></td></tr>
+	   <br />
+	  <tr><td>Email:</td><td> <input type="email" id="email" name="email" /></td></tr>
+	   <br />
+	     
+         <tr><td colspan=2 style="text-align: center; font-weight: 700;">Make your pizza</td></tr>
+	 
+	  <tr><td><input type="checkbox" name="pizza" id="pizza" checked value="cheese" /></td><td> Cheese</td></tr>
+	   
+	  <tr><td><input type="checkbox" name="pizza" id="pizza" value="pepperoni" /></td><td> Pepperoni</td></tr>
+	  
+	  <tr><td><input type="checkbox" name="pizza" id="pizza" value="anchovies" /></td><td> Anchovies</td></tr>
+	   
+	  <tr><td><input type="checkbox" name="pizza" id="pizza" value="mushrooms" /></td><td> Mushrooms</td></tr>
+	   <tr><td colspan=2>
+	   <input type="radio" name="sex" id="sex" value="male" /> Male
+	   <input type="radio" name="sex" id="sex" value="female" /> Female
+	   <input type="radio" name="sex" id="sex" value="other" checked /> Other
+	   </td></tr>
+	   <tr style="color="red"><td colspan=2 style="text-align: center; font-weight: 700;">Select Lists</td></tr>
+	   <tr><td>Single option list</td><td>
+	   <select name="class" id="class">
+		   <option value="Kenneth">Kenneth</option>
+		   <option value="Chet">Chet</option>
+		   <option value="Jason">Jason</option>
+	     	   <option value="Lee">Lee</option>
+		   <option value="Ori">Ori</option>
+		   <option value="Marsha">Marsha</option>
+		   <option value="Xavier">Xavier</option>
+		   <option value="Tyler">Tyler</option>
+		   <option value="Chris">Chris</option>
+	   </select>
+	   </td></tr>
+	    <tr><td>Multiple option list</td><td>
+	   <select name="class" id="class1" multiple>
+		   <option value="Kenneth">Kenneth</option>
+		   <option value="Chet">Chet</option>
+		   <option value="Jason">Jason</option>
+	     	   <option value="Lee">Lee</option>
+		   <option value="Ori">Ori</option>
+		   <option value="Marsha">Marsha</option>
+		   <option value="Xavier">Xavier</option>
+		   <option value="Tyler">Tyler</option>
+		   <option value="Chris">Chris</option>
+ 	  </select>
+	  </td></tr>
+	   <tr><td>Long option list</td><td>
+	  <select name="class" id="class2" size=7>
+		   <option value="Kenneth">Kenneth</option>
+		   <option value="Chet">Chet</option>
+		   <option value="Jason">Jason</option>
+	     	   <option value="Lee">Lee</option>
+		   <option value="Ori">Ori</option>
+		   <option value="Marsha">Marsha</option>
+		   <option value="Xavier">Xavier</option>
+		   <option value="Tyler">Tyler</option>
+		   <option value="Chris">Chris</option>
+	  </select>
+	  </td></tr>
+	  <tr><td colspan=2>
+	   <textarea name="comment" id="comment" rows=4 cols=60>Comments please...</textarea>
+	   </td></tr>
+           <tr style="text-align: center; background-color: DarkGrey;"><td><input type="submit" value="Click Me" /></td><td> <input type="reset" value="Clear Form" /></td></tr>
+	  </table>
+
+	 </form>
+
+	<!-- TABLE EXAMPLE -->
+	   <table rules ="all" style="border: black 60px">
+	       <tr>
+		    <th> First</th><th>Last </th><th> Party</th>
+	       </tr>
+	        <tr>
+		    <td>Hubert </td><td>Humphery</td><td>Dem </td>
+	       </tr>
+	        <tr>
+		    <td>Lyndon </td><td>Johnson</td><td>Dem </td>
+	       </tr>
+	   </table>
+     </body>
+</html>
