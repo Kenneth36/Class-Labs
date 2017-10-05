@@ -51,11 +51,26 @@ namespace MathsOperators
                 {
                     remainderValues();
                 }
+                else
+                {
+                    throw new InvalidOperationException("No operator selected");
+                }
             }
-            catch (Exception caught)
+            catch (FormatException fEx)
             {
-                expression.Text = "";
-                result.Text = caught.Message;
+                result.Text = fEx.Message;
+            }
+            catch (OverflowException oEx)
+            {
+                result.Text = oEx.Message;
+            }
+            catch (InvalidOperationException ioEx)
+            {
+                result.Text = ioEx.Message;
+            }
+            catch (Exception ex)
+            {
+                result.Text = ex.Message;
             }
         }
 
@@ -64,9 +79,9 @@ namespace MathsOperators
             int lhs = int.Parse(lhsOperand.Text);
             int rhs = int.Parse(rhsOperand.Text);
             int outcome = 0;
-            // TODO: Add rhs to lhs and store the result in outcome
+
             outcome = lhs + rhs;
-            expression.Text = $"{lhsOperand.Text} + {rhsOperand.Text}";
+            expression.Text = $"{lhs} + {rhs}";
             result.Text = outcome.ToString();
         }
 
@@ -75,9 +90,9 @@ namespace MathsOperators
             int lhs = int.Parse(lhsOperand.Text);
             int rhs = int.Parse(rhsOperand.Text);
             int outcome = 0;
-            // TODO: Subtract rhs from lhs and store the result in outcome
+
             outcome = lhs - rhs;
-            expression.Text = $"{lhsOperand.Text} - {rhsOperand.Text}";
+            expression.Text = $"{lhs} - {rhs}";
             result.Text = outcome.ToString();
         }
 
@@ -86,9 +101,9 @@ namespace MathsOperators
             int lhs = int.Parse(lhsOperand.Text);
             int rhs = int.Parse(rhsOperand.Text);
             int outcome = 0;
-            // TODO: Multiply lhs by rhs and store the result in outcome
-            outcome = lhs * rhs;
-            expression.Text = $"{lhsOperand.Text} * {rhsOperand.Text}";
+
+            outcome = checked(lhs * rhs);
+            expression.Text = $"{lhs} * {rhs}";
             result.Text = outcome.ToString();
         }
 
@@ -97,9 +112,9 @@ namespace MathsOperators
             int lhs = int.Parse(lhsOperand.Text);
             int rhs = int.Parse(rhsOperand.Text);
             int outcome = 0;
-            // TODO: Divide lhs by rhs and store the result in outcome
+
             outcome = lhs / rhs;
-            expression.Text = $"{lhsOperand.Text} / {rhsOperand.Text}";
+            expression.Text = $"{lhs} / {rhs}";
             result.Text = outcome.ToString();
         }
 
@@ -108,9 +123,9 @@ namespace MathsOperators
             int lhs = int.Parse(lhsOperand.Text);
             int rhs = int.Parse(rhsOperand.Text);
             int outcome = 0;
-            // TODO: Work out the remainder after dividing lhs by rhs and store the result in outcome
+
             outcome = lhs % rhs;
-            expression.Text = $"{lhsOperand.Text} % {rhsOperand.Text}";
+            expression.Text = $"{lhs} % {rhs}";
             result.Text = outcome.ToString();
         }
     }
